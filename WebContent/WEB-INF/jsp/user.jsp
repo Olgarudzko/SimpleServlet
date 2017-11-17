@@ -25,5 +25,8 @@
 </tr>
 </table>
 </c:if>
+<c:if test="${requestScope.user == null}">
+<h2>No such user</h2>
+</c:if>
 </body>
 </html>
