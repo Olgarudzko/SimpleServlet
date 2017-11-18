@@ -23,11 +23,11 @@ public class FindUserCommand implements Command{
 		ServiceFactory factory = ServiceFactory.getInstance();
 		
 		try {
-			factory.getUserService().findUser(user);
+			user=factory.getUserService().findUser(user);
 		} catch (ServiceException e) {
 			user=null;
+			e.printStackTrace();
 		}
-		
 		request.setAttribute(USER2, user);
 	}
 

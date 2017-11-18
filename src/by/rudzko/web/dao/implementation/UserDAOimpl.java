@@ -20,9 +20,13 @@ public class UserDAOimpl implements UserDAO{
 		try {
 			Statement statement = ConnectionCreator.getConnection().createStatement();
 			ResultSet fullInfo = statement.executeQuery(String.format(USER_REQUEST, user.getName(), user.getSurname()));
-			fullInfo.next();
+			
+			if (fullInfo.next()) {
 			user.setPhone(fullInfo.getInt(PHONE));
 			user.setEmail(fullInfo.getString(EMAIL));
+			} else {
+				return null;
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
