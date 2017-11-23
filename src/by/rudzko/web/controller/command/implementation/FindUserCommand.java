@@ -28,7 +28,9 @@ public class FindUserCommand implements Command{
 			user=null;
 			e.printStackTrace();
 		}
-		request.setAttribute(USER2, user);
+		request.setAttribute(USER2, user);// в случае исключительной ситвации ты передаешь на страницу jsp
+		// явно и сама null парамерт - зачем?
+		// у тебя же ошибка произошла
 	}
 
 }
