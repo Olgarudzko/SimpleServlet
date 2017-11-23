@@ -1,4 +1,4 @@
-package by.rudzko.web.domain.entity;
+package by.rudzko.web.domain.entity;// можно просто domain, а то entity  - это уже как синоним
 
 public class User {
 
