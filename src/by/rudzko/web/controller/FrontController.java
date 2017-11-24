@@ -20,6 +20,7 @@ public class FrontController extends HttpServlet {
     }
 
 		public void init(ServletConfig config) throws ServletException {
+			// такое нужно удалять при сдаче
 //	try {
 //			Statement statement = ConnectionCreator.getConnection().createStatement();
 //			statement.executeUpdate(String.format(Locale.ENGLISH,"CREATE DATABASE olgarudzko;"));

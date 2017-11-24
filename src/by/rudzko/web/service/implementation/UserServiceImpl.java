@@ -11,7 +11,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User findUser(User user) throws ServiceException {
-
+		// а куда подевалась валидация из сервисов?
 		DAOFactory factory = DAOFactory.getInstance();
 		UserDAO userDAO = factory.getUserDAO();
         try {
